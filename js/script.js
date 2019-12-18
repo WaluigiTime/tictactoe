@@ -1,13 +1,23 @@
-
-
-
-let currentPlayer = "x"
-let turns = 0
-let gameEnd = false
-
-function performLogic(buttonId, tile){
-
+gameEnd = false
+if (turns = 9) {
+let gameEnd = true
 }
+
+
+function performLogic(buttonId, tileId){
+    if (currentPlayer === "x"){
+    currentPlayer = "o"
+    } else {
+    currentPlayer = "x"
+    }
+    $(buttonId).remove()    
+    $(tileId).html(currentPlayer)
+    let gameEnd = true
+}
+
+
+
+
 
 $("#button1").click(function () {
     performLogic("#button1", "#tile1");
